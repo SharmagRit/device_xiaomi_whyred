@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cipher_whyred.mk
+    $(LOCAL_DIR)/awaken_whyred.mk
