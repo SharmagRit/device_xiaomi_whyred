@@ -41,7 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.flac.sw.decoder.24bit=true \
     persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac \
     persist.bluetooth.a2dp_offload.cap=sbc-aptx-aptxhd-aac \
-    ro.vendor.bluetooth.wipower=false
+    ro.vendor.bluetooth.wipower=false \
     vendor.audio.use.sw.alac.decoder=true \
     vendor.audio.use.sw.ape.decoder=true \
     vendor.audio.hw.aac.encoder=true \
@@ -155,19 +155,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.pmd=true \
     ro.vendor.sensors.sta_detect=true
 
-# SurfaceFlinger
+# Surfaceflinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    debug.sf.early_phase_offset_ns=11600000 \
+    debug.sf.early_app_phase_offset_ns=11600000 \
+    debug.sf.early_gl_phase_offset_ns=3000000 \
+    debug.sf.early_gl_app_phase_offset_ns=15000000 \
+    debug.sf.hw=1 \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.max_virtual_display_dimension=4096 \
-    ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
-    ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.early_phase_offset_ns=500000 \
-    debug.sf.early_app_phase_offset_ns=500000 \
-    debug.sf.early_gl_phase_offset_ns=3000000 \
-    debug.sf.early_gl_app_phase_offset_ns=15000000
+    ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
+    vendor.display.disable_skip_validate=1 \
+    vendor.display.enable_default_color_mode=1 \
+    vendor.display.qdcm.disable_factory_mode=1 \
+    vendor.display.qdcm.mode_combine=1 \
+    vendor.gralloc.enable_fb_ubwc=1 \
+    ro.hardware.egl=adreno \
+    ro.hardware.vulkan=sdm660
 
 # Enable backpressure for GL comp
 PRODUCT_PROPERTY_OVERRIDES += \
