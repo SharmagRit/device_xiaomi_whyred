@@ -840,6 +840,9 @@ vendor/lib64/libsecureui.so|65f24fb26da7f0bfd507c04e9efb278a4cdd8c20
 vendor/lib64/libsecureui_svcsock.so|e364290497862270cd01d9be84f0141ea92e92f9
 vendor/lib64/libssd.so|d6758bd01b360be7bb68f35f56978a5e9a21d3c3
 
+# DRM - from mata OPM1.170911.254
+vendor/lib64/libspl.so|0cf185c22519bbae1e1232928fda151f538f9977
+
 # Keymaster - from LA.UM.8.2.r1-07400-sdm660.0
 vendor/lib64/libkeymasterdeviceutils.so|ea44915adfee57f1bd813b2184987565d396ab82
 vendor/lib64/libkeymasterprovision.so|25505bda86672a5ae31f75b8f8af0a3560ef648f
