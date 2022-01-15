@@ -41,15 +41,15 @@ PRODUCT_MODEL := Redmi Note 5
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="whyred" \
-    PRODUCT_NAME="whyred" \
-    PRIVATE_BUILD_DESC="redfin-user 12 SPB5.210812.002 7671067 release-keys"
+# PRODUCT_BUILD_PROP_OVERRIDES += \
+#     TARGET_DEVICE="whyred" \
+#     PRODUCT_NAME="whyred" \
+#     PRIVATE_BUILD_DESC="redfin-user 12 SPB5.210812.002 7671067 release-keys"
 
-BUILD_FINGERPRINT := google/redfin/redfin:12/SPB5.210812.002/7671067:user/release-keys
+# BUILD_FINGERPRINT := google/redfin/redfin:12/SPB5.210812.002/7671067:user/release-keys
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=google/redfin/redfin:12/SPB5.210812.002/7671067:user/release-keys
+# PRODUCT_PROPERTY_OVERRIDES += \
+#     ro.build.fingerprint=google/redfin/redfin:12/SPB5.210812.002/7671067:user/release-keys
 
 TARGET_VENDOR := Xiaomi
 IS_PHONE := true
