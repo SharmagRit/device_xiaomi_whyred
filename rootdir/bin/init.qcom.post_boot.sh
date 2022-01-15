@@ -112,8 +112,11 @@ fi
 # wsf Range : 1..1000 So set to bare minimum value 1.
 echo 1 > /proc/sys/vm/watermark_scale_factor
 
-# Start cdsprpcd
-start vendor.cdsprpcd
+# Start cdsprpcd only for sdm660 and disable for sdm630 and sdm636
+        case "$soc_id" in
+            "317" | "324" | "325" | "326" )
+            start vendor.cdsprpcd
+        esac
 
 # Start Host based Touch processing
 case "$hw_platform" in
