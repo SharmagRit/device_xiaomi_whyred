@@ -31,6 +31,9 @@ $(call inherit-product-if-exist, vendor/MiuiCamera/config.mk)
 # Inherit some common AwakenOS stuff.
 $(call inherit-product, vendor/awaken/config/common_full_phone.mk)
 
+# Inherit  Google Hotword Enrollment
+$(call inherit-product, vendor/xiaomi/google/google.mk)
+
 USE_GAPPS := true
 
 PRODUCT_NAME := awaken_whyred
