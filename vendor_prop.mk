@@ -155,10 +155,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.pmd=true \
     ro.vendor.sensors.sta_detect=true
 
-# SurfaceFlingers
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.ims_volte_enable=1 \
