@@ -30,7 +30,8 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.authsecret@1\.0-service u:object_r:hal_authsecret_default_exec:s0
 
 # Touchscreen
-/proc/tp_gesture u:object_r:sysfs_tap_to_wake:s0
+/sys/touchpanel/double_tap u:object_r:sysfs_tap_to_wake:s0
+/proc/touchpanel/wake_gesture u:object_r:sysfs_tap_to_wake:s0
 
 # Mlipay
 /(vendor|system/vendor)/bin/mlipayd@1.1             u:object_r:hal_mlipay_default_exec:s0
