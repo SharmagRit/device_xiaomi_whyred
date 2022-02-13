@@ -127,8 +127,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.gpu_comp_tiling=1 \
     vendor.display.disable_partial_split=1 \
     debug.hwui.use_buffer_age=false \
-    vendor.display.perf_hint_window=50
-
+    vendor.display.perf_hint_window=50 \
+    debug.renderengine.backend=skiaglthreaded \
+    renderthread.skia.reduceopstasksplitting=true
+    
 #Set speaker protection cal tx path sampling rate to 48k
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.spkr_prot.tx.sampling_rate=48000
