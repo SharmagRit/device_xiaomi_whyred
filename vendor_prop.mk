@@ -126,6 +126,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.ptor.enable=true \
     debug.sf.gpu_comp_tiling=1 \
     vendor.display.disable_partial_split=1 \
+    vendor.display.idle_time=32767 \
     debug.hwui.use_buffer_age=false \
     vendor.display.perf_hint_window=50 \
     debug.renderengine.backend=skiaglthreaded \
