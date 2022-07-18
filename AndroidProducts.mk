@@ -14,4 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/awaken_whyred.mk
+    $(LOCAL_DIR)/lineage_whyred.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_whyred-user \
+    lineage_whyred-userdebug \
+    lineage_whyred-eng

@@ -1,4 +1,4 @@
-# 
+#
 # Copyright (C) 2018 The Mokee Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,27 +28,37 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 # Inherit from custom vendor
 $(call inherit-product-if-exist, vendor/MiuiCamera/config.mk)
 
-# Inherit some common AwakenOS stuff.
-$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
+# Inherit some common riceDroid stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit  Google Hotword Enrollment
-$(call inherit-product, vendor/xiaomi/google/google.mk)
+$(call inherit-product-if-exist, vendor/xiaomi/google/google.mk)
 
-USE_GAPPS := true
-
-PRODUCT_NAME := awaken_whyred
+# Device identifier. This must come after all inclusions.
+PRODUCT_NAME := lineage_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 5
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-PRODUCT_PROPERTY_OVERRIDES += \
-	BUILD_FINGERPRINT := "google/raven/raven:12/SQ1D.220105.007/8030436:user/release-keys"
-
+# riceDroid Stuff with GApps
+TARGET_BUILD_GRAPHENEOS_CAMERA := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+SUSHI_BOOTANIMATION  := 1080
+TARGET_GAPPS_ARCH := arm64
 TARGET_VENDOR := Xiaomi
 IS_PHONE := true
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-TARGET_SCREEN_DENSITY := 440
+WITH_GMS := true
+
+# Fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="raven-user 12 SQ3A.220605.009.B1 8650216 release-keys"
+
+BUILD_FINGERPRINT := google/raven/raven:12/SQ3A.220605.009.B1/8650216:user/release-keys
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Maintainer Stuff
+RICE_MAINTAINER := SharmaG
+RICE_OFFICIAL := true
